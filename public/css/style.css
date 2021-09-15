@@ -1,0 +1,32 @@
+form p{
+  color:red;
+}
+
+button a{
+  color:white;
+}
+
+
+.full-wrapper{
+  background-color: dodgerblue;
+  padding:1em 0em 1em 0em;
+}
+
+nav ul li a{
+  color:white;
+  font-size: 1rem;
+}
+
+button a:hover{
+  color:white;
+  text-decoration: none;
+}
+
+nav ul{
+  justify-content: space-between;
+}
+
+nav ul li a:hover{
+  color: orange;
+  transition: 1s ease;
+}

@@ -1,0 +1,27 @@
+<%- include('./includes/header.ejs'); %>
+
+<div class="container">
+  <div class="row">
+    <% if(demos.length>0){ for(let demo of demos){ %>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title"><%= demo.email%></h4>
+          <p><%= demo.csvFileData%></p>
+          <input type="hidden" name="id" value="<%= demo.id %>">
+          <button class="btn btn-primary"><a href="/edit/<%= demo.id %>">Edit This Item</a></button>
+          <button class="btn btn-danger" onclick="deleteItem(this)">Delete This Item</button>
+        </div>
+      </div>
+    </div>
+
+    <% } }else{ %>
+
+    <h1>No data in our database</h1>
+    <% } %>
+  </div>
+</div>
+
+<script src="/js/delete.js"></script>
+
+<%- include('./includes/footer.ejs'); %>
